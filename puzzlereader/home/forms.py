@@ -1,7 +1,7 @@
 from turtle import title
 from django import forms
 
-from puzzlereader.home.models import Book
+#from puzzlereader.home.models import Book
 
 GENRES = (
     'Action', 'Classics', 'Comic', 'Mystery',
@@ -12,7 +12,7 @@ GENRES = (
 
 class BookForm(forms.Form):
     class Meta:
-        model = Book
+        #model = Book
         fields = ('name', 'title', 'genre', 'bio', 'num_stars')
 
 

@@ -1,0 +1,9 @@
+<h1> My Bookshelf </h1>
+
+<ul>
+    {% for book in object_list %}
+        <li>{{ book.title }} </li>
+    {% empty %}
+        <li>No books yet, get to reading!</li>
+    {% endfor %}
+    </ul>

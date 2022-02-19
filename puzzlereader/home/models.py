@@ -1,6 +1,6 @@
 from tkinter.tix import Select
 from django.db import models
-
+from django.contrib.auth.models import User
 from django.conf import settings
 GENRES = (
     ('Action', 'Action'), ('Fiction', 'Fiction')
@@ -14,6 +14,8 @@ GENRES = (
 
 class Book(models.Model):
 
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, null=True, blank=True)
     name = models.CharField(max_length=25, default="user")
     title = models.CharField(max_length=30, default="None")
     genre = models.CharField(max_length=200,
