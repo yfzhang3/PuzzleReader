@@ -13,7 +13,7 @@
 <meta name="theme-color" content="#ff0000">
 <html lang="en">
 
-<title>Welcome to PuzzleReader!</title>
+<title>BlairHacks</title>
     
 <head>
     <meta charset="utf-8">
@@ -31,11 +31,10 @@
     <br>
     <br>
     <div class="info-items" align="center">
-      <button class="info"><b>Home</b></button>
-      <button class="info"><b>About</b></button>
-      <button class="info"><b>XYZ</b></button>
-      <button class="info"><b>XYZ</b></button>
-    </div>  
+      <button class="info"> <a href="{% url 'home:home' %}">Home</a></button>
+      <button class="info"><a href="{% url 'home:books' %}">Bookshelf</a></button>
+      <button class="info"><a href="{% url 'home:home' %}">About</a></button>
+</div>  
 
 
 
