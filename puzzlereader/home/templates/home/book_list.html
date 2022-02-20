@@ -1,9 +1,20 @@
 <h1> My Bookshelf </h1>
 
 <ul>
+    <!--
+        create a url with the pattern of the url's name and auto fills it with the id
+    
+-->
+
+<ul>
     {% for book in object_list %}
-        <li>{{ book.title }} </li>
+    <!--home:books, books refers to the URL-->
+        <li><a href="{%  url 'home:book' book.id  %}">{{book.title}}</a></li>
     {% empty %}
         <li>No books yet, get to reading!</li>
     {% endfor %}
     </ul>
+
+
+
+

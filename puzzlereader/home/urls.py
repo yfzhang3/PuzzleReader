@@ -3,7 +3,8 @@ from django.urls import path
 from . import views
 from .views import BookList, BookDetail
 
+app_name = "home"
 urlpatterns = [
-    path('', BookList.as_view(), name='book'),
-    path('okay /<int:pk>/', BookDetail.as_view(), name='books'),
+    path('books/', BookList.as_view(), name='books'),
+    path('books/<int:pk>/', BookDetail.as_view(), name='book'),
 ]
