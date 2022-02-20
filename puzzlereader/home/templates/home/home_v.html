@@ -13,32 +13,42 @@
 <meta name="theme-color" content="#ff0000">
 <html lang="en">
 
-<title>BlairHacks</title>
-    
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link href="home_v.css" rel="stylesheet" type="static/css" />
-  </head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>BlairHacks</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/old.css' %}"/>
 
-    <script src="script.js"></script>
-    
-    <nav class="nav-bar">
-      <img src="media/logo.png" >
-      <img src="media/media/test.jpg" >
+</head>
 
+<body class="back">
+	<script src="script.js">
+	</script>
+
+	<nav class="nav-bar">
+		<img class = "logo" src="https://media.discordapp.net/attachments/944456201884811284/944781957844324362/READ-PixTeller.png">
     </nav>
     <br>
     <br>
+
     <div class="info-items" align="center">
-      <button class="info"> <a href="{% url 'home:home' %}">Home</a></button>
-      <button class="info"><a href="{% url 'home:books' %}">Bookshelf</a></button>
-      <button class="info"><a href="{% url 'home:home' %}">About</a></button>
-</div>  
+        <button class="info"> <a href="{% url 'home:home' %}">Home</a></button>
+        <button class="info"><a href="{% url 'home:books' %}">Bookshelf</a></button>
+        <button class="info"><a href="{% url 'home:home' %}">About</a></button>
+  </div> 
+
+
+
+<h1 class="intro"> <p style="font-family:verdana"> Welcome to Puzzle Reader <h1> 
+
+<h2 class="description"> This is an application made for young readers. <br>
+
+On our website you can keep track of books you've read and are currently reading, create personalized bookshelf with customizable names and book cover images, as well as give each book a quick summary and star rating to share with friends. You can even keep track of your book ratings! <br> <br>
+ 
+</h2>
 
 
 
 
 
-  </body>
-</html>

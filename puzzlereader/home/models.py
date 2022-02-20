@@ -4,13 +4,9 @@ from django.contrib.auth.models import User
 from django.conf import settings
 from django.core.validators import MaxValueValidator, MinValueValidator
 GENRES = (
-    ('Action', 'Action'), ('Fiction', 'Fiction')
+    ('Action', 'Action'), ('Fiction', 'Fiction'), ('Classics', 'Classics'), ('Mystery',
+                                                                             'Mystery'), ('Comic', 'Comic'), ('Nonfiction', 'Nonfiction'), ('Fantasy', 'Fantasy')
 )
-'''
- 'Classics', 'Comic', 'Mystery',
-    'Fantasy', 'Historical Fiction',
-    'Horror', 'Literary Fiction', 'Nonfiction',
-'''
 
 
 class Book(models.Model):

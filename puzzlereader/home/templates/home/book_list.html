@@ -1,16 +1,40 @@
-<h1> My Bookshelf </h1>
-<button><a href="{% url 'home:create' %}"> Add Task</a></button>
+{% load static %}
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>BlairHacks</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/old.css' %}"/>
 
-<ul>
-    <!--
+
+</head>
+
+<body class="back">
+	<script src="script.js">
+	</script>
+
+	<nav class="nav-bar">
+		<img src="https://media.discordapp.net/attachments/944456201884811284/944781957844324362/READ-PixTeller.png" class ="logo">
+    </nav>
+    <br>
+    <br>
+    <div class="info-items" align="center">
+        <button class="info"> <a href="{% url 'home:home' %}">Home</a></button>
+        <button class="info"><a href="{% url 'home:books' %}">Bookshelf</a></button>
+        <button class="info"><a href="{% url 'home:home' %}">About</a></button>
+  </div> 
+
+<h1 class="h1"> My Bookshelf </h1>
+<button class="button"><a href="{% url 'home:create' %}"> Add Book</a></button>
+
+    <!--s
         create a url with the pattern of the url's name and auto fills it with the id
     
 -->
 
-<ul>
+<ul class="booklists">
     {% for book in object_list %}
     <!--home:books, books refers to the URL-->
-        <li><a href="{%  url 'home:book' book.id  %}">{{book.title}}</a></li>
+        <li class = "title"><a href="{%  url 'home:book' book.id  %}">{{book.title}}</a></li>
     {% empty %}
         <li>No books yet, get to reading!</li>
     {% endfor %}

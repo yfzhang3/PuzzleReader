@@ -1,8 +1,38 @@
 {% load static %}
 
-<img src="{{object.book_cover.url}}">
-<h1>Book:  {{object.title}}</h1>
-<h2>Genre: {{object.genre}} </h2>
-<h3>Description: {{object.bio}} </h3>
-<h3>Rating: {{object.num_stars}} </h3>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>BlairHacks</title>
+	
+</head>
+<link rel="stylesheet" type="text/css" href="{% static 'css/old.css' %}"/>
 
+<body class="back">
+	<script src="script.js">
+	</script>
+
+	<nav class="nav-bar">
+		<img class = "logo" src="https://media.discordapp.net/attachments/944456201884811284/944781957844324362/READ-PixTeller.png">
+    </nav>
+    <br>
+    <br>
+    <div class="info-items" align="center">
+        <button class="info"> <a href="{% url 'home:home' %}">Home</a></button>
+        <button class="info"><a href="{% url 'home:books' %}">Bookshelf</a></button>
+        <button class="info"><a href="{% url 'home:home' %}">About</a></button>
+  </div> 
+
+<section class="selection">
+    <div class="container">
+      <div class="name">
+        <img src="{{object.book_cover.url}}">
+            <div class="content"> 
+            <h1>Book:  {{object.title}}</h1>
+            <h2>Genre: {{object.genre}} </h2>
+            <h3>Description: {{object.bio}} </h3>
+            <h3>Rating: {{object.num_stars}} </h3>
+            </div>
+        </div>
+    </div>
+</section>

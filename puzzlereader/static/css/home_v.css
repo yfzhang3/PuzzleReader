@@ -1,3 +1,7 @@
+.back {
+  background-color: rgb(255, 187, 0);
+}
+
 .info {
   padding: 35px 70px;
   border: 1px;
@@ -15,4 +19,47 @@
   font-weight: 800;
   margin-left: 100px;
   margin-right: 100px;
+}
+
+.selection {
+  width: 80%;
+  margin-left: 50px;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 10vh;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.name {
+  height: max-content;
+  width: 250px;
+  margin-top: 20px;
+  margin-left: 170px;
+  margin-right: 120px;
+}
+.name > img {
+  width: 360px;
+  height: 550px;
+}
+
+.content {
+  padding: 15px;
+}
+.content > p {
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  font-size: 14px;
+}
+.content > h4 {
+  color: hsl(0, 0%, 0%);
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
