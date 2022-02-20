@@ -1,0 +1,18 @@
+.info {
+  padding: 35px 70px;
+  border: 1px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: deepskyblue;
+  color: crimson;
+  font-size: 50px;
+  font-family: cursive;
+}
+
+.info-items {
+  font-size: 100px;
+  font-weight: 800;
+  margin-left: 100px;
+  margin-right: 100px;
+}

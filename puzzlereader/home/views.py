@@ -35,4 +35,4 @@ class BookCreate(CreateView):
     model = Book
     # syntax for all items
     fields = ('title', 'genre', 'bio', 'num_stars')
-    success_url = reverse_lazy('')
+    success_url = reverse_lazy('home:books')
