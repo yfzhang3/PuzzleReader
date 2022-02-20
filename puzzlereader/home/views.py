@@ -21,6 +21,10 @@ def home_view(request):
     return render(request, 'home/home_v.html')
 
 
+def about_view(request):
+    return render(request, 'home/about.html')
+
+
 class BookList(ListView):
     model = Book
     context_object_name = 'books'
