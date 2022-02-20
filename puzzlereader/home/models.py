@@ -2,6 +2,7 @@ from tkinter.tix import Select
 from django.db import models
 from django.contrib.auth.models import User
 from django.conf import settings
+from django.core.validators import MaxValueValidator, MinValueValidator
 GENRES = (
     ('Action', 'Action'), ('Fiction', 'Fiction')
 )
@@ -22,7 +23,9 @@ class Book(models.Model):
                              choices=GENRES,
                              default='None')
     bio = models.CharField(max_length=500)
-    num_stars = models.IntegerField()
+    # this doesn't work
+    num_stars = models.IntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator(5)])
     #image = models.ImageField(upload_to="images/",default="images/221182406_998264654304104_3219754300096054984_n.png")
 
     def __str__(self):

@@ -1,1 +1,11 @@
-<h3> Book Form</h3>
+<h3>Add a New Book</h3>
+
+<button><a href="{% url 'home:books' %}">Back</a></button>
+
+<!--form to add new book-->
+<form method="POST" action="">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value ="Submit"> 
+
+</form>
